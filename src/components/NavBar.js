@@ -2,8 +2,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import "./NavBar.css"
-import logoModoFit from "./logo_modofit_market.png";
+import "../css/NavBar.css";
+import logoModoFit from "../images/logo_modofit_market.png"
 
 function NavBar() {
   return (
