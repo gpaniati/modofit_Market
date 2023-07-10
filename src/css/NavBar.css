@@ -9,3 +9,14 @@
     margin-right: 35px;
     font-weight: bold;
 }
+
+.contadorCarrito{
+    color: green;
+    font-weight: bolder;
+}
+
+.listCarrito{
+    list-style-type: none; 
+    display: flex;
+}
+
