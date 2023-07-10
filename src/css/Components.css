@@ -10,12 +10,12 @@
     font-weight: bold;
 }
 
-#listCarrito{
+.listCarrito{
     list-style-type: none; 
     display: flex;
 }
 
-#contadorCarrito{
+.contadorCarrito{
     color: rgb(3, 182, 3);
     font-weight: bold;
     margin-left: 5px;
@@ -28,14 +28,8 @@
     padding: 10px;
 }
 
-#idSaludo{
+.h2Saludo{
     color: darkgreen;
-    font-family: 'Montserrat', sans-serif;
-}
-
-#botonAgregar{
-    background-color: darkgreen;
-    border-color: darkgreen;
     font-family: 'Montserrat', sans-serif;
 }
 

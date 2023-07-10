@@ -1,19 +1,15 @@
 import { Cart } from "react-bootstrap-icons";
 import "../css/Components.css";
-import { useState } from 'react';
 
 function CartWidged() {
-  const [contadorCarrito, setContadorCarrito] = useState(0);
 
-  const handleChangeGlobal = () => {
-    setContadorCarrito(contadorCarrito + 1);
-  };
-
+  let contadorCarrito = 0;
+  
   return (
     <div>
-      <ul id="listCarrito">
+      <ul className="listCarrito">
         <li><Cart size={35} /></li>
-        <li id="contadorCarrito">{contadorCarrito}</li>
+        <li className="contadorCarrito">{contadorCarrito}</li>
       </ul> 
     </div>
   );
