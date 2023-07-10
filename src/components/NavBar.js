@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import logoModoFit from "../images/logo_modofit_market.png"
 import CartWidged from "./CartWidget";
-import "../css/NavBar.css";
+import "../css/Components.css";
 
 function NavBar() {
 

@@ -1,5 +1,5 @@
 import { Cart } from "react-bootstrap-icons";
-import "../css/NavBar.css";
+import "../css/Components.css";
 import { useState } from 'react';
 
 function CartWidged() {
@@ -11,10 +11,10 @@ function CartWidged() {
 
   return (
     <div>
-      <ul className="listCarrito">
+      <ul id="listCarrito">
         <li><Cart size={35} /></li>
-        <li style={{color: "green"}}>{contadorCarrito}</li>
-      </ul>
+        <li id="contadorCarrito">{contadorCarrito}</li>
+      </ul> 
     </div>
   );
 }

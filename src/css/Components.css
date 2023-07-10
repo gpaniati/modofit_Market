@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.barraNavegacion{
+    background-color: #ecf3ae;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.links{
+    margin-right: 35px;
+    font-weight: bold;
+}
+
+#listCarrito{
+    list-style-type: none; 
+    display: flex;
+}
+
+#contadorCarrito{
+    color: rgb(4, 226, 4);
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.item{
+    background-color: rgb(212, 212, 212);
+}
+
+#idSaludo{
+    color: darkgreen;
+    text-align: center;
+    align-items: center;
+}
