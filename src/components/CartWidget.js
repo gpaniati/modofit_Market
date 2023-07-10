@@ -13,7 +13,7 @@ function CartWidged() {
     <div>
       <ul className="listCarrito">
         <li><Cart size={35} /></li>
-        <li>{contadorCarrito}</li>
+        <li style={{color: "green"}}>{contadorCarrito}</li>
       </ul>
     </div>
   );
