@@ -1,9 +1,11 @@
+import Button from 'react-bootstrap/Button';
 import "../css/Components.css";
 
 function ItemListContainer({saludo = "Bienvenidos"}) {
   return (
-    <div className="item">
-      <h2 id="idSaludo">{saludo}</h2>:
+    <div className="itemContainer">
+      <h2 id="idSaludo">{saludo}</h2>
+      <Button id="botonAgregar">Agregar producto</Button>
     </div>
   );
 }

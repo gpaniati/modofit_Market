@@ -16,17 +16,26 @@
 }
 
 #contadorCarrito{
-    color: rgb(4, 226, 4);
+    color: rgb(3, 182, 3);
     font-weight: bold;
     margin-left: 5px;
 }
 
-.item{
+/*ItemListContainer CSS*/
+.itemContainer{
     background-color: rgb(212, 212, 212);
+    text-align: center;
+    padding: 10px;
 }
 
 #idSaludo{
     color: darkgreen;
-    text-align: center;
-    align-items: center;
+    font-family: 'Montserrat', sans-serif;
 }
+
+#botonAgregar{
+    background-color: darkgreen;
+    border-color: darkgreen;
+    font-family: 'Montserrat', sans-serif;
+}
+
