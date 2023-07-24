@@ -10,6 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
+      <ItemListContainer />
       <Routes>
         <Route exact path="/home" element={<Home />} />
       </Routes>
