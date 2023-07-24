@@ -1,3 +1,4 @@
+
 [
     { "id": 1, "nombre": "Jugo de arándano", "precio": 1000, "descripcion": "Jugo de arándano con pulpa enduzadp con stevia" },
     { "id": 2, "nombre": "Yerba mate", "precio": 600, "descripcion": "Yerba mate orgánica tradicional suave" },

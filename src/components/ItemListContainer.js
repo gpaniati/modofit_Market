@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import productosDB from  "../data/productos.json";
+import ItemList from "./ItemList";
 
 const getMockProductosAsync = new Promise((resolve, reject) => { 
   setTimeout(() => {
+    //if (productosDB.length < 10){
     if (productosDB.length === 0){
       reject("Error en la base de productos. Reintente mas tarde");
     }
@@ -26,7 +28,9 @@ function ItemListContainer() {
   }, []);
 
   return (
-    <div>Procuctos</div>
+    <div>
+      <ItemList productos={productos}/>
+    </div>
   )
 }
 
