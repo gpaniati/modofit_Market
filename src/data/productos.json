@@ -1,0 +1,10 @@
+[
+    { "id": 1, "nombre": "Jugo de arándano", "precio": 1000, "descripcion": "Jugo de arándano con pulpa enduzadp con stevia" },
+    { "id": 2, "nombre": "Yerba mate", "precio": 600, "descripcion": "Yerba mate orgánica tradicional suave" },
+    { "id": 3, "nombre": "Leche de almendras", "precio": 850, "descripcion": "Leche sin lactosa, sin tacc, sin conservantes, sin azúcar" },
+    { "id": 4, "nombre": "Mermelada de frutos rojos", "precio": 990, "descripcion": "Mermelada dietética sin azúcar" },
+    { "id": 5, "nombre": "Tostadas de arroz", "precio": 350, "descripcion": "Tostadas sin tacc, bajas en grasas" },
+    { "id": 6, "nombre": "Miel", "precio": 480, "descripcion": "Miel sólida endulzada naturalmente" },
+    { "id": 7, "nombre": "Granola 1Kg", "precio": 1500, "descripcion": "Contiene copos sin azúcar, avena gruesa, fibras de salvado y pasas de uva" },
+    { "id": 8, "nombre": "Mermelada de durazno", "precio": 990, "descripcion": "Mermelada dietética sin azúcar" }
+]
