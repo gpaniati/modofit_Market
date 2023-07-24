@@ -3,7 +3,7 @@ import "../css/Components.css";
 function Home() {
 
   return (
-    <h1 className="h2Saludo">{saludo}</h1>
+    <h1 className="h1Saludo">Hola Home</h1>
   );
 }
 
