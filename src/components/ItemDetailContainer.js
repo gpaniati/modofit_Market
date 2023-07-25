@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import getMockProductosAsync from  "./mocksDB";
-import ItemList from "./ItemList";
+import { getMockUnProductoAsync } from "./mocksDB";
+import ItemDetail from "./Itemdetail";
 
 function ItemDetailContainer() {
 
   const [producto, setProducto] = useState([]);
 
   useEffect(() => {
-    getMockProductosAsync
+    getMockUnProductoAsync()
     .then(response => {
-      setProductos(response);
+      setProducto(response);
       console.log(response);
     }).catch(err => {
       console.log(err);
@@ -18,9 +18,10 @@ function ItemDetailContainer() {
 
   return (
     <div>
-      <ItemList productos={productos}/>
+      <ItemDetail producto={producto}/>
     </div>
   )
 }
 
 export default ItemDetailContainer;
+

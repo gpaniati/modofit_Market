@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-
+import { getMockProductosAsync } from "./mocksDB";
+import ItemDetailContainer from "./ItemDetailContainer";
 
 function ItemListContainer() {
 
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    getMockProductosAsync
+    getMockProductosAsync()
     .then(response => {
       setProductos(response);
       console.log(response);
@@ -19,6 +20,7 @@ function ItemListContainer() {
   return (
     <div>
       <ItemList productos={productos}/>
+      <ItemDetailContainer />
     </div>
   )
 }

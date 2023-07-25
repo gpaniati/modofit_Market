@@ -1,11 +1,11 @@
 
 [
-    { "id": 1, "nombre": "Jugo de arándano", "precio": 1000, "descripcion": "Jugo de arándano con pulpa enduzadp con stevia", "imagen": "imagenProducto1" },
-    { "id": 2, "nombre": "Yerba mate", "precio": 600, "descripcion": "Yerba mate orgánica tradicional suave", "imagen": "imagenProducto2" },
-    { "id": 3, "nombre": "Leche de almendras", "precio": 850, "descripcion": "Leche sin lactosa, sin tacc, sin conservantes, sin azúcar", "imagen": "imagenProducto3" },
-    { "id": 4, "nombre": "Mermelada de frutos rojos", "precio": 990, "descripcion": "Mermelada dietética sin azúcar", "imagen": "imagenProducto4" },
-    { "id": 5, "nombre": "Tostadas de arroz", "precio": 350, "descripcion": "Tostadas sin tacc, bajas en grasas", "imagen": "imagenProducto5" },
-    { "id": 6, "nombre": "Miel", "precio": 480, "descripcion": "Miel sólida endulzada naturalmente", "imagen": "imagenProducto6" },
-    { "id": 7, "nombre": "Granola 1Kg", "precio": 1500, "descripcion": "Contiene copos sin azúcar, avena gruesa, fibras de salvado y pasas de uva", "imagen": "imagenProducto7" },
-    { "id": 8, "nombre": "Mermelada de durazno", "precio": 990, "descripcion": "Mermelada dietética sin azúcar", "imagen": "imagenProducto8" }
+    { "id": 1, "nombre": "Jugo de arándano", "precio": 1000, "descripcion": "Jugo de arándano con pulpa enduzadp con stevia", "imagen": "/images/modofit_producto_1.png" },
+    { "id": 2, "nombre": "Yerba mate", "precio": 600, "descripcion": "Yerba mate orgánica tradicional suave", "imagen": "/images/modofit_producto_2.png" },
+    { "id": 3, "nombre": "Leche de almendras", "precio": 850, "descripcion": "Leche sin lactosa, sin tacc, sin conservantes, sin azúcar", "imagen": "/images/modofit_producto_3.png" },
+    { "id": 4, "nombre": "Mermelada de frutos rojos", "precio": 990, "descripcion": "Mermelada dietética sin azúcar", "imagen": "/images/modofit_producto_4.png" },
+    { "id": 5, "nombre": "Tostadas de arroz", "precio": 350, "descripcion": "Tostadas sin tacc, bajas en grasas", "imagen": "/images/modofit_producto_5.png" },
+    { "id": 6, "nombre": "Miel", "precio": 480, "descripcion": "Miel sólida endulzada naturalmente", "imagen": "/images/modofit_producto_6.png" },
+    { "id": 7, "nombre": "Granola 1Kg", "precio": 1500, "descripcion": "Contiene copos sin azúcar, avena gruesa, fibras de salvado y pasas de uva", "imagen": "/images/modofit_producto_7.png" },
+    { "id": 8, "nombre": "Mermelada de durazno", "precio": 990, "descripcion": "Mermelada dietética sin azúcar", "imagen": "/images/modofit_producto_8.png" }
 ]
