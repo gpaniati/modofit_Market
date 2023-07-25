@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import getMockProductosAsync from  "../components/productosDB";
+import getMockProductosAsync from  "./mocksDB";
 import ItemList from "./ItemList";
 
 function ItemDetailContainer() {
