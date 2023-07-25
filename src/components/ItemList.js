@@ -1,11 +1,14 @@
-import ItemDetailContainer from "./ItemDetailContainer";
+import CardGroup from "react-bootstrap/CardGroup";
+import Item from "./Item";
 
 function ItemList({ productos }) {
   return (
     <div>
-      {productos.map((producto) => (
-        <ItemDetailContainer key={producto.id} producto={producto} />
-      ))}
+      <CardGroup className="justify-content-around">
+        {productos.map((producto) => (
+          <Item key={producto.id} producto={producto} />
+        ))}
+      </CardGroup>
     </div>
   );
 }
