@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { getMockUnProductoAsync } from "./mocksDB";
 import ItemDetail from "./ItemDetail_1";
 
 function ItemDetailContainer() {
 
+  const {id} = useParams();
   const [producto, setProducto] = useState([]);
 
   useEffect(() => {
-    getMockUnProductoAsync()
+    getMockUnProductoAsync(id)
     .then(response => {
       setProducto(response);
       console.log(response);
