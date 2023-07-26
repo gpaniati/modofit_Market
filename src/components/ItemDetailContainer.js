@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getMockUnProductoAsync } from "./mocksDB";
+import ItemDetail from "./ItemDetail_1";
 
 function ItemDetailContainer() {
 
@@ -15,8 +16,8 @@ function ItemDetailContainer() {
     });
   }, [])
   return (
-    <div>
-     Hola
+    <div className="justify-content-around text-aling-center">
+      <ItemDetail producto={producto}/>
     </div>
   )
 }
