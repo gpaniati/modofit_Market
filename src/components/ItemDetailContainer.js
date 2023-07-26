@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { getMockUnProductoAsync } from "./mocksDB";
-import ItemDetail from "./Itemdetail";
 
 function ItemDetailContainer() {
 
@@ -14,11 +13,10 @@ function ItemDetailContainer() {
     }).catch(err => {
       console.log(err);
     });
-  }, []);
-
+  }, [])
   return (
     <div>
-      <ItemDetail producto={producto}/>
+     Hola
     </div>
   )
 }
