@@ -4,7 +4,7 @@ import Item from "./Item";
 function ItemList({ productos }) {
   return (
     <div>
-      <CardGroup className="justify-content-around">
+      <CardGroup className="d-flex justify-content-around align-items-center">
         {productos.map((producto) => (
           <Item key={producto.id} producto={producto} />
         ))}

@@ -6,11 +6,11 @@ function ItemDetail({ producto }) {
     <div>
       <Card border="success" style={{ width: "40rem" }}>
         <Card.Img variant="top" src={producto.imagen} />
-        <Card.Body>
-          <Card.Title>{producto.nombre}</Card.Title>
+        <Card.Body className="d-flex flex-column">
+          <Card.Title>{producto.nombre}</Card.Title> 
           <Card.Text>{producto.descripcion}</Card.Text>
           <Card.Text>${producto.precio}</Card.Text>
-          <Button variant="success" size="lg">Comprar</Button>
+          <Button variant="success" size="lg">Añadir al Carrito</Button>
         </Card.Body>
       </Card>
     </div>

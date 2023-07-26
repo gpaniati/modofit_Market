@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { getMockProductosAsync } from "./mocksDB";
-import ItemDetailContainer from "./ItemDetailContainer";
 
 function ItemListContainer() {
 
@@ -20,7 +19,6 @@ function ItemListContainer() {
   return (
     <div>
       <ItemList productos={productos}/>
-      <ItemDetailContainer />
     </div>
   )
 }

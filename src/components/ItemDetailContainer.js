@@ -16,7 +16,7 @@ function ItemDetailContainer() {
     });
   }, [])
   return (
-    <div className="justify-content-around text-aling-center">
+    <div className = "d-flex justify-content-center align-items-center">
       <ItemDetail producto={producto}/>
     </div>
   )

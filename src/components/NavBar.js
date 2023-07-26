@@ -31,7 +31,7 @@ function NavBar() {
               <NavDropdown.Item href="/">Miel</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/">Cosmética Natural</Nav.Link>
-            <Nav.Link href="/">Contacto</Nav.Link> 
+            <NavLink href="/">Contacto</NavLink> 
           </Nav>
         </Navbar.Collapse>
         <CartWidged/>
