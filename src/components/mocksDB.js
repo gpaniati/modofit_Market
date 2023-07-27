@@ -25,7 +25,7 @@ export const getMockUnProductoAsync = (id) => {
         reject("Error en la base de productos. Reintente mas tarde");
       }
       resolve(productosDB.find((producto) => producto.id === id));
-    }, 1000);
+    }, 500);
   });
 
   return promesaProducto;

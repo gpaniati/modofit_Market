@@ -6,10 +6,11 @@
 }
 .carta{
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
 }
 
 .links{
-    margin-right: 35px;
+    margin-right: 80px;
     font-weight: bold;
 }
 

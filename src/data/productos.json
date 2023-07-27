@@ -1,11 +1,15 @@
 
 [
-    { "id": "1", "categoria": "bebidas", "nombre": "Jugo de arándano", "precio": 1000, "descripcion": "Jugo de arándano con pulpa enduzadp con stevia.", "imagen": "/images/modofit_producto_1.png" },
+    { "id": "1", "categoria": "bebidas", "nombre": "Jugo de arándano", "precio": 1000, "descripcion": "Jugo de arándano con pulpa endulzado con stevia.", "imagen": "/images/modofit_producto_1.png" },
     { "id": "2", "categoria": "desayuno", "nombre": "Yerba mate", "precio": 600, "descripcion": "Yerba mate orgánica tradicional suave.", "imagen": "/images/modofit_producto_2.png" },
     { "id": "3", "categoria": "bebidas", "nombre": "Leche de almendras", "precio": 850, "descripcion": "Leche sin lactosa, sin tacc, sin azúcar.", "imagen": "/images/modofit_producto_3.png" },
     { "id": "4", "categoria": "mermeladas", "nombre": "Mermelada de frutos rojos", "precio": 990, "descripcion": "Mermelada dietética sin azúcar.", "imagen": "/images/modofit_producto_4.png" },
     { "id": "5", "categoria": "desayuno", "nombre": "Tostadas de arroz", "precio": 350, "descripcion": "Tostadas sin tacc, bajas en grasas.", "imagen": "/images/modofit_producto_5.png" },
     { "id": "6", "categoria": "mermeladas", "nombre": "Miel", "precio": 480, "descripcion": "Miel sólida endulzada naturalmente.", "imagen": "/images/modofit_producto_6.png" },
     { "id": "7", "categoria": "cereales", "nombre": "Granola 1Kg", "precio": 1500, "descripcion": "Contiene copos, avena, salvado y pasas de uva.", "imagen": "/images/modofit_producto_7.png" },
-    { "id": "8", "categoria": "mermeladas", "nombre": "Mermelada de durazno", "precio": 990, "descripcion": "Mermelada dietética sin azúcar.", "imagen": "/images/modofit_producto_8.png" }
+    { "id": "8", "categoria": "mermeladas", "nombre": "Mermelada de durazno", "precio": 990, "descripcion": "Mermelada dietética sin azúcar.", "imagen": "/images/modofit_producto_8.png" },
+    { "id": "9", "categoria": "bebidas", "nombre": "Jugo de naranja y zanahoria", "precio": 1050, "descripcion": "Jugo endulzado con stevia, sin tacc.", "imagen": "/images/modofit_producto_9.png" },
+    { "id": "10", "categoria": "cereales", "nombre": "Mix Criollo", "precio": 1500, "descripcion": "Frutos secos. Fuente de fibra y minerales.", "imagen": "/images/modofit_producto_10.png" },
+    { "id": "11", "categoria": "mermeladas", "nombre": "Mermelada de ciruela", "precio": 990, "descripcion": "Mermelada dietética sin azúcar.", "imagen": "/images/modofit_producto_11.png" },
+    { "id": "12", "categoria": "desayuno", "nombre": "Galletitas de avena y semillas", "precio": 400, "descripcion": "Vegano, con stevia. 0% grasas trans.", "imagen": "/images/modofit_producto_12.png" }
 ]
