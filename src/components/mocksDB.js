@@ -10,7 +10,7 @@ export const getMockProductosAsync = () => {
       }
 
       resolve(productosDB);
-    }, 1500);
+    }, 1000);
   });
 
   return promesaProductos;
