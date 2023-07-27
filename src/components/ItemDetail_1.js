@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 function ItemDetail({ producto }) {
   return (
     <div>
-      <Card border="success" style={{ width: "40rem" }}>
+      <Card className="carta" border="success" style={{ width: "35rem" }}>
         <Card.Img variant="top" src={producto.imagen} />
         <Card.Body className="d-flex flex-column">
           <Card.Title>{producto.nombre}</Card.Title> 

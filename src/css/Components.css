@@ -4,6 +4,9 @@
     background-color: #ecf3ae;
     font-family: 'Montserrat', sans-serif;
 }
+.carta{
+    font-family: 'Montserrat', sans-serif;
+}
 
 .links{
     margin-right: 35px;
@@ -21,15 +24,20 @@
     margin-left: 5px;
 }
 
-/*ItemListContainer CSS*/
+.card-title{
+    font-weight: bold!important;
+}
+
+/*ItemListContainer CSS
 .itemContainer{
     background-color: rgb(212, 212, 212);
     text-align: center;
     padding: 10px;
 }
-
+*/
+/*
 .h2Saludo{
     color: darkgreen;
     font-family: 'Montserrat', sans-serif;
 }
-
+*/

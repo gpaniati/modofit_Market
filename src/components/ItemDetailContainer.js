@@ -17,7 +17,7 @@ function ItemDetailContainer() {
     });
   }, [])
   return (
-    <div className = "d-flex justify-content-center align-items-center">
+    <div className = "d-flex justify-content-center align-items-center mt-5 mb-5">
       <ItemDetail producto={producto}/>
     </div>
   )
