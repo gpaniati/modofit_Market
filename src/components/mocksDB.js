@@ -17,16 +17,14 @@ export const getMockProductosAsync = () => {
 }
 
 //Traer produto especifico de base de datos de productos asincronicamente.
-export const getMockUnProductoAsync = (idProducto) => {
+export const getMockUnProductoAsync = (id) => {
   const promesaProducto = new Promise((resolve, reject) => {
     setTimeout(() => {
+      //if (productosDB.length < 10){
       if (productosDB.length === 0) {
         reject("Error en la base de productos. Reintente mas tarde");
       }
-      console.log("Hola")
-      console.log(productosDB[2]);
-      resolve(productosDB[0]);
-      //resolve(productosDB.find((idProducto) => idProducto === id));
+      resolve(productosDB.find((producto) => producto.id === id));
     }, 1000);
   });
 

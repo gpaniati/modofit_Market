@@ -12,7 +12,6 @@ function ItemDetailContainer() {
     getMockUnProductoAsync(id)
     .then(response => {
       setProducto(response);
-      console.log(response);
     }).catch(err => {
       console.log(err);
     });

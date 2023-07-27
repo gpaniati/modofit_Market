@@ -10,7 +10,6 @@ function ItemListContainer() {
     getMockProductosAsync()
     .then(response => {
       setProductos(response);
-      console.log(response);
     }).catch(err => {
       console.log(err);
     });
