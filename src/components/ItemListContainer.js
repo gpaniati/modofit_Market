@@ -11,8 +11,14 @@ function ItemListContainer() {
   useEffect(() => {
     getMockProductosAsync()
     .then(response => {
-      setProductos(response);
-      console.log(categoryId);
+      if ( categoryId ){
+        //Filtro los procutos de la categoria seleccionada para filtrarlos del array.
+        const productosDeCategoria = response.filter((producto) => producto.categoria === categoryId);
+        setProductos(productosDeCategoria);
+      }else{
+        //Seteo el total de los productos sin filtro.
+        setProductos(response);
+      }
     }).catch(err => {
       console.log(err);
     });
