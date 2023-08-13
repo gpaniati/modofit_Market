@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getMockUnProductoAsync } from "./mocksDB";
+//import { getMockUnProductoAsync } from "./mocksDB";
 import ItemDetail from "./ItemDetail_1";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 function ItemDetailContainer() {
 
   const {id} = useParams();
   const [producto, setProducto] = useState([]);
-
+/*
   useEffect(() => {
     getMockUnProductoAsync(id)
     .then(response => {
@@ -16,6 +17,22 @@ function ItemDetailContainer() {
       console.log(err);
     });
   }, [id])
+  */
+
+  useEffect(() => {
+    const dataBase = getFirestore();
+    const productoRef = doc(dataBase, "productos", id);
+    getDoc(productoRef)
+    .then((snapshot) => {
+      if (snapshot.exists){
+        const productoDb = { id: snapshot.id, ...snapshot.data() }
+        setProducto(productoDb);
+      }
+      else{
+        setProducto([]);
+      }
+    })
+  },[id]);
 
   return (
     <div className = "d-flex justify-content-center align-items-center mt-5 mb-5">
