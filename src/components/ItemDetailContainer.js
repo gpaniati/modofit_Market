@@ -1,34 +1,30 @@
-import { useEffect, useState } from "react";
+
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail_1";
-import { doc, getDoc, getFirestore } from "firebase/firestore";
+import useGetDocumentById from "../hooks/useGetDocumentById";
+import imagen from "../images/cargando.gif"
 
 function ItemDetailContainer() {
+  
+  const dbName = "productos";
+  const { id } = useParams();
 
-  const {id} = useParams();
-  const [producto, setProducto] = useState([]);
+  //Hooks
+  const { document: producto } = useGetDocumentById( dbName, id );
 
-  useEffect(() => {
-    const dataBase = getFirestore();
-    const productoRef = doc(dataBase, "productos", id);
-    getDoc(productoRef)
-    .then((snapshot) => {
-      if (snapshot.exists){
-        const productoDb = { id: snapshot.id, ...snapshot.data() }
-        setProducto(productoDb);
-      }
-      else{
-        setProducto([]);
-      }
-    })
-  },[id]);
+  if (!producto) {
+    return (
+      <div className="d-flex justify-content-center">
+        <img src={imagen} alt="Cargando..."></img>
+      </div>
+    );
+  }
 
   return (
-    <div className = "d-flex justify-content-center align-items-center mt-5 mb-5">
-      <ItemDetail producto={producto}/>
+    <div className="d-flex justify-content-center align-items-center mt-5 mb-5">
+      <ItemDetail producto={producto} />
     </div>
-  )
+  );
 }
 
 export default ItemDetailContainer;
-
