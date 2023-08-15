@@ -12,13 +12,12 @@ function useGetDocumentById(collectionName, id) {
     getDoc(documentRef)
     .then((snapshot) => {
       if (snapshot.exists()) {
-        console.log("Trajo el documento");
         const documento = {id: snapshot.id, ...snapshot.data()};
         setDocument(documento);
       }
     })
     .catch((error) => console.error(error));
-  }, []);
+  }, [collectionName, id]);
 
 
   return ({document});
