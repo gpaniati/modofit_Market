@@ -9,7 +9,7 @@ function ItemDetailContainer() {
   const dbName = "productos";
   const { id } = useParams();
 
-  //Hooks
+  //Hook.
   const { document: producto } = useGetDocumentById( dbName, id );
 
   if (!producto) {
