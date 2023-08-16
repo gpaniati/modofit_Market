@@ -1,7 +1,12 @@
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import ItemCount from "./ItemCount";
 
 function ItemDetail({ producto }) {
+
+  function handleAdd(cantidad){
+    console.log({cantidad});
+  }
+
   return (
     <div>
       <Card className="carta" border="success" style={{ width: "30rem" }}>
@@ -10,10 +15,12 @@ function ItemDetail({ producto }) {
           <Card.Title>{producto.nombre}</Card.Title> 
           <Card.Text>{producto.descripcion}</Card.Text>
           <Card.Text>${producto.precio}</Card.Text>
-          <Button variant="success" size="lg">Añadir al Carrito</Button>
-        </Card.Body>
+          <ItemCount inicial={1} stock={5} onAdd={handleAdd}/>
+        </Card.Body> 
+     
       </Card>
     </div>
   );
 }
 export default ItemDetail;
+//<Button variant="success" size="lg">Añadir al Carrito</Button>
