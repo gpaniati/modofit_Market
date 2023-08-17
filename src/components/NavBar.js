@@ -21,7 +21,6 @@ function NavBar() {
             <Nav.Link as={Link} to='/category/bebidas'>Bebidas</Nav.Link>
             <Nav.Link as={Link} to='/category/desayuno'>Desayuno</Nav.Link>
             <Nav.Link as={Link} to='/category/mermeladas'>Mermeladas y Dulces</Nav.Link>
-            <Nav.Link as={Link} to='/contacto'>Contacto</Nav.Link> 
             <CartWidged/>
           </Nav>
         </Navbar.Collapse>
