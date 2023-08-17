@@ -1,11 +1,29 @@
 import CartContext from "./CartContext";
 import { useState } from "react";
 
-function CartProvider({ children }) {
+function CartProvider( {children } ) {
   const [cartList, setCartList] = useState([]);
 
-  function addToCart(item, qty) {
-    //implementa la funcionalidad para agregar un producto al carrito
+  //Funcion para para agregar un producto al carrito.
+  function addToCart(producto, cantidad) {
+    console.log("Entro a addToCart");
+    console.log(cantidad);
+    console.log(producto);
+    console.log("Que tiene cartList");
+    console.log(cartList);
+    //let carro;
+    //carro = cartList.find(prod => prod.id === producto.id);
+    //console.log(carro);
+    //console.log(producto);
+    //console.log(cartList);
+    /*
+    if (existe){
+        producto.cantidad = producto.cantidad + cantidad;
+        setCartList(cartList);
+    }else{
+        setCartList(...cartList, {...producto, cantidad: cantidad});
+    }
+    console.log(cartList);*/
   }
 
   //Funcion para vaciar el carrito.
@@ -20,7 +38,7 @@ function CartProvider({ children }) {
 
   return (
     <CartContext.Provider
-      value={{ addToCart, removeList, deleteProducto }}
+      value={{ cartList, addToCart, removeList, deleteProducto }}
     >
       {children}
     </CartContext.Provider>

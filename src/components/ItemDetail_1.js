@@ -1,17 +1,18 @@
 import Card from "react-bootstrap/Card";
 import ItemCount from "./ItemCount";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Button } from "react-bootstrap";
 import {Link} from 'react-router-dom';
-import useCartContext from "../context/cart/useCartContext";
+import { CartContext } from "../context/cart/CartContext";
 
 function ItemDetail({ producto }) {
-  const [cantidadAgregada, setCantidadAgregada] = useState(0);
-  const { addToCart } = useCartContext();
 
-  function handleOnAdd(cantidad) {
-    setCantidadAgregada(cantidad);
-    addToCart(producto, cantidad);
+  const [cantidadAgregada, setCantidadAgregada] = useState(0);
+  const { addToCart } = useContext(CartContext);
+
+  function handleOnAdd(contador) {
+    setCantidadAgregada(contador);
+    addToCart(producto, contador);
   }
 
   return (

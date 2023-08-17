@@ -1,12 +1,17 @@
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import useGetDocumentsByCategory from "../hooks/useGetDocumentsByCategory";
-import imagen from "../images/cargando.gif"
+import imagen from "../images/cargando.gif";
+//Sacar
+import { useContext } from "react";
+import { CartContext } from "../context/cart/CartContext";
+//Sacar
 
 function ItemListContainer() {
 
   const dbName = "productos";
   const { categoryId } = useParams();
+  const { cartList } = useContext(CartContext);
 
   //Hook.
   const { documents: productos } = useGetDocumentsByCategory( dbName, categoryId );
@@ -18,6 +23,10 @@ function ItemListContainer() {
       </div>
     );
   }
+
+//Sacar
+//  console.log("Idiota");
+//Sacar
 
   return (
     <div>
