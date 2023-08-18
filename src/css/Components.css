@@ -29,16 +29,8 @@
     font-weight: bold!important;
 }
 
-/*ItemListContainer CSS
-.itemContainer{
-    background-color: rgb(212, 212, 212);
-    text-align: center;
-    padding: 10px;
+.nav-link{
+    /*display: flex;*/
+    align-items: center!important;
+    align-content: center!important;
 }
-*/
-/*
-.h2Saludo{
-    color: darkgreen;
-    font-family: 'Montserrat', sans-serif;
-}
-*/

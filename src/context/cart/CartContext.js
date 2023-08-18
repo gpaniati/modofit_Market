@@ -9,23 +9,23 @@ function CartProvider({ children }) {
   //Funcion para para agregar un producto al carrito.
   function addToCart(producto, cantidad) {
     let newCart;
-    let prod = cartList.find((prod) => prod.id == producto.id);
+    let prod = cartList.find((prod) => prod.id === producto.id);
     if (prod){
-        console.log("Encontro");
+        //console.log("Encontro");
         prod.cantidad += cantidad;
         newCart = [...cartList];
-        console.log(newCart);
+        //console.log(newCart);
     }else{
-        console.log("NO Encontro");
-        console.log("Cart Viejo");
-        console.log(cartList);
+        //console.log("NO Encontro");
+        //console.log("Cart Viejo");
+        //console.log(cartList);
         newCart = [...cartList, {...producto, cantidad: cantidad}];
-        console.log("Cart Nuevo");
+        //console.log("Cart Nuevo");
         console.log(newCart);
     }
     setCartList(newCart);
-    console.log("Cart Actualizado");
-    console.log(cartList);
+    //console.log("Cart Actualizado");
+    //console.log(cartList);
   }
 
   //Funcion para vaciar el carrito.
@@ -34,12 +34,14 @@ function CartProvider({ children }) {
   }
 
   //Funcion para eliminar producto del carrito.
-  function deleteProducto(id) {
+  function deleteItem(id) {
     setCartList(cartList.filter((producto) => producto.id !== id));
   }
   const contexto = {
     cartList,
-    addToCart
+    addToCart,
+    removeList,
+    deleteItem
   }
 
   return (

@@ -1,19 +1,23 @@
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import React from "react";
 
-function CartItems ({ item, itemDelete }) {
+function CartItems({ item, itemDelete }) {
   return (
-  <Card>
-    <Container>
-      <Row>
-        <Col>{item.producto.nombre}</Col>
-        <Col>{item.producto.cantidad}</Col>
-        <Col>{item.producto.precio}</Col>
-        <Button variant="danger" onClick={itemDelete}>Remover</Button>
-      </Row>
-    </Container>
-  </Card>
-   )
+    <Card>
+      <Container>
+        <Row>
+          <Col>{item.nombre}</Col>
+          <Col>Cantidad: {item.cantidad}</Col>
+          <Col>Precio: ${item.precio}</Col>
+          <Col>
+            <Button variant="danger" size="sm" onClick={itemDelete}>
+              Eliminar
+            </Button>
+          </Col>
+        </Row>
+      </Container>
+    </Card>
+  );
 }
 
 export default CartItems;
