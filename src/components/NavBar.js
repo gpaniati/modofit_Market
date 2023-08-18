@@ -29,7 +29,5 @@ function NavBar() {
 
   );
 }
-/*
- <CartWidged />
-            <Nav.Link as={Link} to='/cart'>Carrito</Nav.Link>*/
+
 export default NavBar;

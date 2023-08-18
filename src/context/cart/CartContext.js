@@ -21,7 +21,7 @@ function CartProvider({ children }) {
         //console.log(cartList);
         newCart = [...cartList, {...producto, cantidad: cantidad}];
         //console.log("Cart Nuevo");
-        console.log(newCart);
+        //console.log(newCart);
     }
     setCartList(newCart);
     //console.log("Cart Actualizado");

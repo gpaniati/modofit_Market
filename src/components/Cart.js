@@ -3,10 +3,10 @@ import { CartContext } from "../context/cart/CartContext";
 import CartItems from "./CartItems";
 
 function Cart() {
-  const { cartList } = useContext(CartContext);
+  const { cartList, deleteItem} = useContext(CartContext);
 
-  function handleItemDelete(){
-    console.log("Borro Producto");
+  function handleItemDelete(id){
+    deleteItem(id);
   }
 
   return (
