@@ -3,10 +3,17 @@
     margin: 20px;
 }
 
-.badgeCart{
+.badgeCart, 
+.detalleItem, 
+.totalItem{
     margin: 20px;
 }
 
 .cartFooter{
     margin-top: 20px;
 }
+
+.lista{
+    width: 50px;
+}
+

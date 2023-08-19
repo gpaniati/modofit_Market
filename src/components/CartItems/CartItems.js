@@ -3,6 +3,7 @@ import Badge from 'react-bootstrap/Badge';
 import Image from 'react-bootstrap/Image';
 import { BsFillTrashFill } from "react-icons/bs";
 import ListGroup from 'react-bootstrap/ListGroup';
+import "../CartItems/CartItems.css";
 
 function CartItems({ item, itemDelete }) {
 
@@ -10,16 +11,17 @@ function CartItems({ item, itemDelete }) {
     <ListGroup as="ol">
       <ListGroup.Item
         as="li"
-        className="d-flex justify-content-around align-items-center"
+        className="d-flex justify-content-between align-items-center"
       >
-        <div className="ms-2 me-auto">
+        <Image className="imageCart" src={item.imagen}/>
+        <div className="detalleItem">
           <div className="fw-bold">{item.nombre}</div>
           ${item.precio}
         </div>
-        <Image className="imageCart" src={item.imagen}/>
         <Badge className="badgeCart" bg="success"pill>
           {item.cantidad}
         </Badge>
+        <div className="totalItem">${(item.precio * item.cantidad)}</div>
         <BsFillTrashFill color="red" size={30} onClick={() => itemDelete(item.id)} />
       </ListGroup.Item>
     </ListGroup>
@@ -27,3 +29,5 @@ function CartItems({ item, itemDelete }) {
 }
 
 export default CartItems;
+
+//className="ms-2 me-auto"

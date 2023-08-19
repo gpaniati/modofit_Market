@@ -19,16 +19,16 @@ function ItemCount({inicial , stock , onAdd}) {
 
   return (
     <div className="d-flex justify-content-around align-items-center">
-      <Button variant="secondary" size="sm" onClick={handleDecrementar} disabled={contador <= 1}>
+      <Button variant="success" size="sm" onClick={handleDecrementar} disabled={contador <= 1}>
         -
-      </Button>{" "}
-      <span> {contador} </span>{" "}
-      <Button variant="secondary" size="sm" onClick={handleIncrementar} disabled={contador >= stock}>
+      </Button>
+      <span> {contador} </span>
+      <Button variant="success" size="sm" onClick={handleIncrementar} disabled={contador >= stock}>
         +
-      </Button>{" "}
-      <Button variant="secondary" size="lg" onClick={() => onAdd(contador)} disabled={stock <= 0} >
+      </Button>
+      <Button variant="success" size="lg" onClick={() => onAdd(contador)} disabled={stock <= 0} >
         Añadir al Carrito
-      </Button>{" "}
+      </Button>
     </div>
   );
 }

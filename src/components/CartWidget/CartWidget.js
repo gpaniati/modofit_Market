@@ -5,12 +5,12 @@ import { CartContext } from "../../context/cart/CartContext/CartContext";
 
 function CartWidged() {
 
-  const {totalItems} = useContext(CartContext);
+  const {totalProductos} = useContext(CartContext);
 
   return (
     <div>
       <Cart size={35} />
-      <Badge bg={`${(totalItems > 0) ? 'success' : 'danger'}`} >{totalItems}</Badge>
+      <Badge bg={`${(totalProductos > 0) ? 'success' : 'danger'}`} >{totalProductos}</Badge>
     </div>
     
   );

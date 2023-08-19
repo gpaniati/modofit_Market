@@ -1,3 +1,5 @@
+//NO SE UTILIZA... SE UTILIZO EN LA SEGUNDA PRENTREGA
+
 import productosDB from "../data/productos.json";
 
 //Traer base de datos de productos asincronicamente.

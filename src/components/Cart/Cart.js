@@ -4,11 +4,10 @@ import { useContext } from "react";
 import { CartContext } from "../../context/cart/CartContext/CartContext";
 import { Link } from 'react-router-dom';
 import CartItems from "../CartItems/CartItems";
-import "../Cart/Cart.css";
 
 function Cart() {
   
-  const { cartList, removeList, deleteItem} = useContext(CartContext);
+  const { cartList, removeList, deleteItem, precioTotal} = useContext(CartContext);
 
   function handleItemDelete(id){
     deleteItem(id);
@@ -46,11 +45,12 @@ function Cart() {
         <CartItems key={producto.id} item={producto} itemDelete={handleItemDelete} />   
       ))}
       </div>
+      <h3 className="d-flex flex-row justify-content-center">Total compra: ${precioTotal}</h3>
       <div className="d-flex flex-row justify-content-center cartFooter">
         <Button variant="danger" size="sm" onClick={handleRemoveList}>Limpiar Carrito</Button>
       </div>
       <div className="d-flex flex-row justify-content-center cartFooter">
-        <Button variant="success" size="sm" >FINALIZAR</Button>
+        <Button variant="success" size="sm" >FINALIZAR COMPRA</Button>
       </div>
     </div>
   );
