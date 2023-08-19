@@ -27,7 +27,7 @@ function ItemCount({inicial , stock , onAdd}) {
         +
       </Button>{" "}
       <Button variant="secondary" size="lg" onClick={() => onAdd(contador)} disabled={stock <= 0} >
-        Añadir al Carrito{" "}
+        Añadir al Carrito
       </Button>{" "}
     </div>
   );

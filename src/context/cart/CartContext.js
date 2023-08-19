@@ -11,21 +11,12 @@ function CartProvider({ children }) {
     let newCart;
     let prod = cartList.find((prod) => prod.id === producto.id);
     if (prod){
-        //console.log("Encontro");
         prod.cantidad += cantidad;
-        newCart = [...cartList];
-        //console.log(newCart);
+        newCart = [...cartList]; 
     }else{
-        //console.log("NO Encontro");
-        //console.log("Cart Viejo");
-        //console.log(cartList);
         newCart = [...cartList, {...producto, cantidad: cantidad}];
-        //console.log("Cart Nuevo");
-        //console.log(newCart);
     }
     setCartList(newCart);
-    //console.log("Cart Actualizado");
-    //console.log(cartList);
   }
 
   //Funcion para vaciar el carrito.
