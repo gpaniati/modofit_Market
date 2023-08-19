@@ -27,28 +27,3 @@ function CartItems({ item, itemDelete }) {
 }
 
 export default CartItems;
-/*
-  return (
-    <Card>
-      <Container>
-        <Row>
-          <Col>
-            <Image src={item.imagen} rounded/>
-          </Col>
-          <Col>{item.nombre}</Col>
-          <Col>Cantidad: {item.cantidad}</Col>
-          <Col>Precio: ${item.precio}</Col>
-          <Col>
-            <Button
-              variant="danger"
-              size="sm"
-              onClick={() => itemDelete(item.id)}
-            >
-              Eliminar
-            </Button>
-          </Col>
-        </Row>
-      </Container>
-    </Card>
-  );
-*/

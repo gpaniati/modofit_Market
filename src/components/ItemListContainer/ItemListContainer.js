@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import ItemList from "./ItemList";
-import useGetDocumentsByCategory from "../hooks/useGetDocumentsByCategory";
+import ItemList from "../ItemList/ItemList";
+import useGetDocumentsByCategory from "../../hooks/useGetDocumentsByCategory";
 import imagen from "../images/cargando.gif";
 
 function ItemListContainer() {

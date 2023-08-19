@@ -1,12 +1,13 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useContext } from "react";
-import { CartContext } from "../../context/cart/CartContext";
+import { CartContext } from "../../context/cart/CartContext/CartContext";
 import { Link } from 'react-router-dom';
-import CartItems from "../CartItems";
+import CartItems from "../CartItems/CartItems";
 import "../Cart/Cart.css";
 
 function Cart() {
+  
   const { cartList, removeList, deleteItem} = useContext(CartContext);
 
   function handleItemDelete(id){

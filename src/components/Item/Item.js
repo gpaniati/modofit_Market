@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
 
 function Item({ producto }) {
+  
     return (
     <div>
       <Card className="carta" style={{ width: "25rem" }}>

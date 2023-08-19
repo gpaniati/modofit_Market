@@ -1,9 +1,9 @@
 import Card from "react-bootstrap/Card";
-import ItemCount from "./ItemCount";
+import ItemCount from "../ItemCount/ItemCount";
 import { useContext, useState } from "react";
 import { Button } from "react-bootstrap";
 import {Link} from 'react-router-dom';
-import { CartContext } from "../context/cart/CartContext";
+import { CartContext } from "../../context/cart/CartContext/CartContext";
 
 function ItemDetail({ producto }) {
 

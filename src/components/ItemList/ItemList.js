@@ -1,7 +1,8 @@
 import CardGroup from "react-bootstrap/CardGroup";
-import Item from "./Item";
+import Item from "../Item/Item";
 
 function ItemList({ productos }) {
+  
   return (
     <div>
       <CardGroup className="d-flex justify-content-around align-items-center mt-3">
