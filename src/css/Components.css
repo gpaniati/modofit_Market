@@ -34,3 +34,12 @@
     align-items: center!important;
     align-content: center!important;
 }
+
+.imageCart{
+    height: 100px;
+    margin: 20px;
+}
+
+.badgeCart{
+    margin: 20px;
+}
