@@ -1,5 +1,6 @@
 import { getDoc, doc, getFirestore, updateDoc } from "firebase/firestore";
-import { createContext, useEffect, useState } from "react";
+//import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 export const CartContext = createContext();
 
 function CartProvider({ children }) {
@@ -19,18 +20,18 @@ function CartProvider({ children }) {
     setPrecioTotal(handlePrecioTotal())
   }, [cartList]);
   */
- 
+
   //funcion para calcular el precio total del carrito. 
-  function handlePrecioTotal() {
+  /*function handlePrecioTotal() {
     const cartAuxiliar = (handlePrecioTotalByProducto());
     const valorInicial = 0;
     return cartAuxiliar.reduce((acumulador, producto) => acumulador + producto.precioTotalByProdcuto, valorInicial);
-  }
+  }*/
 
   //Funcion para retorna un carrito con item y su total de acuerdo a la cantidad). 
-  function handlePrecioTotalByProducto() {
+  /*function handlePrecioTotalByProducto() {
     return cartList.map((producto) => ({...producto, precioTotalByProdcuto: (producto.cantidad * producto.precio)}));
-  }
+  }*/
 
   //Funcion para para agregar un producto al carrito.
   function addToCart(producto, cantidad) {
@@ -59,7 +60,7 @@ function CartProvider({ children }) {
   //Funcion para vaciar el carrito.
   function removeList() {
     setCartList([]);
-    setTotalProductos(0);
+    setPrecioTotal(0);
   }
 
   //Funcion para eliminar producto del carrito.
