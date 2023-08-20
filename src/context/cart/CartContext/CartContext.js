@@ -15,10 +15,11 @@ function CartProvider({ children }) {
   const [updateState, setUpdateState] = useState(false);
 
   //Hook que detecta la incorporacion de producto y recalcula precio total de compra.
-  useEffect(() => {
+  /*useEffect(() => {
     setPrecioTotal(handlePrecioTotal())
   }, [cartList]);
-
+  */
+ 
   //funcion para calcular el precio total del carrito. 
   function handlePrecioTotal() {
     const cartAuxiliar = (handlePrecioTotalByProducto());
