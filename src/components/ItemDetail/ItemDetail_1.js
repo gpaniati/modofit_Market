@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { Button } from "react-bootstrap";
 import {Link} from 'react-router-dom';
 import { CartContext } from "../../context/cart/CartContext/CartContext";
+import "../ItemDetail/ItemDetail.css";
 
 function ItemDetail({ producto }) {
 
@@ -22,10 +23,10 @@ function ItemDetail({ producto }) {
         <Card.Body className="d-flex flex-column">
           <Card.Title>{producto.nombre}</Card.Title>
           <Card.Text>{producto.descripcion}</Card.Text>
-          <Card.Text>${producto.precio}</Card.Text>
+          <Card.Text className="precio">${producto.precio}</Card.Text>
           {cantidadAgregada > 0 ? (
-            <Button as={Link} to="/cart" variant="success" size="md">
-              Finalizar Compra
+            <Button as={Link} to="/" variant="success" size="md">
+              SEGUI COMPRANDO
             </Button>
           ) : (
             <ItemCount inicial={1} stock={5} onAdd={handleOnAdd} />

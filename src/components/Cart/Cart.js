@@ -53,7 +53,7 @@ function Cart() {
         ))}
       </div>
       <h3 className="d-flex flex-row justify-content-center">
-        Total compra: ${precioTotal}
+        Total de compra: ${precioTotal}
       </h3>
       <div className="d-flex flex-row justify-content-center cartFooter">
         <Button variant="danger" size="sm" onClick={handleRemoveList}>

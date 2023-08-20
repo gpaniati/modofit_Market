@@ -1,14 +1,17 @@
 //import { Button, Card, Col, Container, Row, Image } from "react-bootstrap";
 import Badge from 'react-bootstrap/Badge';
 import Image from 'react-bootstrap/Image';
-import Box from 'react-bootstrap'
 import { BsFillTrashFill } from "react-icons/bs";
 import ListGroup from 'react-bootstrap/ListGroup';
 import "../CartItems/CartItems.css";
+import { Card } from 'react-bootstrap';
 
 function CartItems({ item, itemDelete }) {
 
   return (
+    <div className='d-flex justify-content-center'>
+    <Card style={{ width: "50rem" }}>
+      <Card.Body>
     <ListGroup as="ol">
       <ListGroup.Item
         as="li"
@@ -19,13 +22,16 @@ function CartItems({ item, itemDelete }) {
           <div className="fw-bold">{item.nombre}</div>
           ${item.precio}
         </div> 
-        <Badge className="badgeCart" bg="success"pill>
+        <Badge className="badgeCart" bg="success">
           {item.cantidad}
         </Badge>
         <div className="totalItem">${(item.precio * item.cantidad)}</div>
         <BsFillTrashFill color="red" size={30} onClick={() => itemDelete(item.id)} />
       </ListGroup.Item>
     </ListGroup>
+    </Card.Body>
+    </Card>
+    </div>
   );
 }
 

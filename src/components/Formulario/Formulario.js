@@ -1,11 +1,11 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Card from 'react-bootstrap/Card';
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../context/cart/CartContext/CartContext";
-import "../Formulario/Formulario.css";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import "../Formulario/Formulario.css";
 
 function Formulario() {
   const [form, setForm] = useState({});
@@ -31,7 +31,7 @@ function Formulario() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (form != {}){
+    if (form !== {}){
       //Armo orden para subir a FireStore.
       const newOrderProducts = (cartList.map((producto) => (
         {
@@ -52,8 +52,8 @@ function Formulario() {
 
   //Navego a la ruta de confirmacion de compra.
   function handleFinCompra(idOrder) {
-    navigate(`/fincompra/${idOrder}`);
     removeList();
+    navigate(`/fincompra/${idOrder}`);
   }
 
   return (
