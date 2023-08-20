@@ -1,5 +1,6 @@
 import { getDoc, doc, getFirestore, updateDoc } from "firebase/firestore";
 import { createContext, useEffect, useState } from "react";
+import imagen from "../../../images/cargando.gif";
 export const CartContext = createContext();
 
 function CartProvider({ children }) {
@@ -51,10 +52,8 @@ function CartProvider({ children }) {
     }   
     setUpdateState(false);
     updateStock(producto.id, cantidad);
-    if (updateState){
-      setCartList(newCart);
-      setTotalProductos(totalProductos + cantidad);
-    }
+    setCartList(newCart);
+    setTotalProductos(totalProductos + cantidad);
   }
 
   //Funcion para vaciar el carrito.

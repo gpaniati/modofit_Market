@@ -12,12 +12,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBBQjc8mlpgqWRZDO3K1FgPvySQbVEM36k",
-  authDomain: "modofit-market.firebaseapp.com",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
   projectId: "modofit-market",
-  storageBucket: "modofit-market.appspot.com",
-  messagingSenderId: "722190956015",
-  appId: "1:722190956015:web:99c763dd68e0570637b21a"
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APPID
 };
 
 // Initialize Firebase
