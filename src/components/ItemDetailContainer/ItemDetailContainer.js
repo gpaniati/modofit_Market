@@ -2,7 +2,7 @@
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail_1";
 import useGetDocumentById from "../../hooks/useGetDocumentById";
-import cargando from "../images/cargando.gif"
+import imagen from "../../images/cargando.gif";
 
 function ItemDetailContainer() {
   
@@ -15,7 +15,7 @@ function ItemDetailContainer() {
   if (!producto) {
     return (
       <div className="d-flex justify-content-center">
-        <img src={cargando} alt="Cargando..."></img>
+        <img src={imagen} alt="Cargando..."></img>
       </div>
     );
   }
