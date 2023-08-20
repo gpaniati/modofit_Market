@@ -1,15 +1,18 @@
+import { getDoc, doc, getFirestore, updateDoc } from "firebase/firestore";
 import { createContext, useEffect, useState } from "react";
-
 export const CartContext = createContext();
 
 function CartProvider({ children }) {
 
+  const dbName = "productos";
   //Array con productos del carrito.
   const [cartList, setCartList] = useState([]);
   //Cantidad de productos en carrito.
   const [totalProductos, setTotalProductos] = useState(0);
   //Precio total de los productos delcarrito ;
   const [precioTotal, setPrecioTotal] = useState(0);
+  //Estado de update.
+  const [updateState, setUpdateState] = useState(false);
 
   //Hook que detecta la incorporacion de producto y recalcula precio total de compra.
   useEffect(() => {
@@ -33,13 +36,25 @@ function CartProvider({ children }) {
     let newCart;
     let prod = cartList.find((prod) => prod.id === producto.id);
     if (prod){
-        prod.cantidad += cantidad;
-        newCart = [...cartList]; 
+      prod.cantidad += cantidad;
+      newCart = [...cartList]; 
     }else{
-        newCart = [...cartList, {...producto, cantidad: cantidad}];
+      const newProd = {
+        id: producto.id,
+        categoria: producto.categoria,
+        descripcion: producto.descripcion,
+        imagen: producto.imagen,
+        nombre: producto.nombre,
+        precio: producto.precio
+      }
+      newCart = [...cartList, {...newProd, cantidad: cantidad}];
     }   
-    setCartList(newCart);
-    setTotalProductos(totalProductos + cantidad);
+    setUpdateState(false);
+    updateStock(producto.id, cantidad);
+    if (updateState){
+      setCartList(newCart);
+      setTotalProductos(totalProductos + cantidad);
+    }
   }
 
   //Funcion para vaciar el carrito.
@@ -49,12 +64,35 @@ function CartProvider({ children }) {
   }
 
   //Funcion para eliminar producto del carrito.
-  function deleteItem(id) {
-    const itemDelete = cartList.find((producto) => producto.id === id );
-    setCartList(cartList.filter((producto) => producto.id !== id));
+  function deleteItem(prod) {
+    const itemDelete = cartList.find((producto) => producto.id === prod.id );
+    setCartList(cartList.filter((producto) => producto.id !== prod.id));
     if (itemDelete){
-      setTotalProductos(totalProductos - itemDelete.cantidad);
+      const cantidadNegativa = itemDelete.cantidad * (-1);
+      setUpdateState(false);
+      updateStock(prod.id, cantidadNegativa);
+      if (updateState){
+        setTotalProductos(totalProductos - itemDelete.cantidad);
+      }
     }
+  }
+
+  //Funcion para modificar stock del producto en FireStore.
+  function updateStock(id, cantidad) {
+      const dataBaseProductos = getFirestore();
+      const productoRef = doc(dataBaseProductos, dbName, id);
+      //Obtengo producto de la base para sabe su stock actual.
+      getDoc(productoRef)
+      .then((snapshot) => {
+      if (snapshot.exists()) {
+        const producto = {id: snapshot.id, ...snapshot.data()};
+        const stockNuevo = producto.stock - cantidad;
+        //Actualizo stock de producto en Firestore. 
+        updateDoc(productoRef, {stock: stockNuevo})
+          .then(setUpdateState(true))
+          .catch((error) => console.error(error));
+      }})
+      .catch((error) => console.error(error));
   }
 
   const contexto = {

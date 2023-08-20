@@ -26,7 +26,7 @@ function CartItems({ item, itemDelete }) {
           {item.cantidad}
         </Badge>
         <div className="totalItem">${(item.precio * item.cantidad)}</div>
-        <BsFillTrashFill color="red" size={30} onClick={() => itemDelete(item.id)} />
+        <BsFillTrashFill color="red" size={30} onClick={() => itemDelete(item)} />
       </ListGroup.Item>
     </ListGroup>
     </Card.Body>

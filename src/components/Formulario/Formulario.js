@@ -13,9 +13,6 @@ function Formulario() {
   const { cartList, removeList } = useContext(CartContext);
   const navigate = useNavigate();
 
-  const dataBaseOrders = getFirestore();
-  const collectionOrders = collection(dataBaseOrders, "orders");
-  
   const setField = (field, value) => {
     setForm({
     ...form,
@@ -42,7 +39,10 @@ function Formulario() {
         }))
       );
       const newOrderFinal = ({newOrderProducts, form});
- 
+
+      const dataBaseOrders = getFirestore();
+      const collectionOrders = collection(dataBaseOrders, "orders");
+  
       //Subo order de compra a FireStore.
       addDoc(collectionOrders, newOrderFinal)
         .then(({id}) => {handleFinCompra(id)})

@@ -10,8 +10,8 @@ function Cart() {
   const { cartList, removeList, deleteItem, precioTotal } =
     useContext(CartContext);
 
-  function handleItemDelete(id) {
-    deleteItem(id);
+  function handleItemDelete(producto) {
+    deleteItem(producto);
   }
 
   function handleRemoveList() {

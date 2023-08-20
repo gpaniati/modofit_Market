@@ -4,3 +4,9 @@
     font-style: italic;
     font-size: 20px;
 }
+
+.sinStock{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
