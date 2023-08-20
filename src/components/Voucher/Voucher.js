@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
-function FinCompra() {
+function Voucher() {
 
   const { idOrder } = useParams();
 
@@ -32,4 +32,4 @@ function FinCompra() {
   );
 }
 
-export default FinCompra;
+export default Voucher;

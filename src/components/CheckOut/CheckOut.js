@@ -5,9 +5,9 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../context/cart/CartContext/CartContext";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import "../Formulario/Formulario.css";
+import "../CheckOut/CheckOut.css";
 
-function Formulario() {
+function CheckOut() {
   const [form, setForm] = useState({});
   const [errors, setErrors] = useState({});
   const { cartList, removeList } = useContext(CartContext);
@@ -53,7 +53,7 @@ function Formulario() {
   //Navego a la ruta de confirmacion de compra.
   function handleFinCompra(idOrder) {
     removeList();
-    navigate(`/fincompra/${idOrder}`);
+    navigate(`/voucher/${idOrder}`);
   }
 
   return (
@@ -107,4 +107,4 @@ function Formulario() {
   );
 }
 
-export default Formulario;
+export default CheckOut;

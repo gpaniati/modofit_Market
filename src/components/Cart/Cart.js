@@ -61,7 +61,7 @@ function Cart() {
         </Button>
       </div>
       <div className="d-flex flex-row justify-content-center cartFooter">
-        <Button as={Link} to="/formulario" variant="success" size="sm">
+        <Button as={Link} to="/checkout" variant="success" size="sm">
           FINALIZAR COMPRA
         </Button>
       </div>
