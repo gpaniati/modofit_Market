@@ -1,19 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-.barraNavegacion{
-    background-color: #ecf3ae;
-    font-family: 'Montserrat', sans-serif;
-}
+
 .carta{
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
 }
-
-.links{
-    margin-right: 80px;
-    font-weight: bold;
-}
-
+/*
 .listCarrito{
     list-style-type: none; 
     display: flex;
@@ -30,7 +22,7 @@
 }
 
 .nav-link{
-    /*display: flex;*/
     align-items: center!important;
     align-content: center!important;
 }
+*/

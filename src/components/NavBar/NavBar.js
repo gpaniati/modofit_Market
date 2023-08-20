@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import CartWidged from "../CartWidget/CartWidget";
 import {Link} from 'react-router-dom';
-import "../../css/Components.css";
+import "../NavBar/NavBar.css";
 
 function NavBar() {
 

@@ -1,15 +1,16 @@
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import { useContext } from "react";
 import { CartContext } from "../../context/cart/CartContext/CartContext";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import CartItems from "../CartItems/CartItems";
+import "../Cart/Cart.css";
 
 function Cart() {
-  
-  const { cartList, removeList, deleteItem, precioTotal} = useContext(CartContext);
+  const { cartList, removeList, deleteItem, precioTotal } =
+    useContext(CartContext);
 
-  function handleItemDelete(id){
+  function handleItemDelete(id) {
     deleteItem(id);
   }
 
@@ -17,11 +18,11 @@ function Cart() {
     removeList();
   }
 
-  if (cartList.length === 0){
+  if (cartList.length === 0) {
     return (
       <div
         className="modal show"
-        style={{ display: 'block', position: 'initial' }}
+        style={{ display: "block", position: "initial" }}
       >
         <Modal.Dialog>
           <Modal.Header>
@@ -31,7 +32,9 @@ function Cart() {
             <p>No hay productos en tu carrito de compras.</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button as={Link} to="/" variant="success" >IR A COMPRAR</Button>
+            <Button as={Link} to="/" variant="success">
+              IR A COMPRAR
+            </Button>
           </Modal.Footer>
         </Modal.Dialog>
       </div>
@@ -39,18 +42,28 @@ function Cart() {
   }
 
   return (
-    <div className='cart'>
+    <div>
       <div>
-      {cartList.map((producto) => (
-        <CartItems key={producto.id} item={producto} itemDelete={handleItemDelete} />   
-      ))}
+        {cartList.map((producto) => (
+          <CartItems
+            key={producto.id}
+            item={producto}
+            itemDelete={handleItemDelete}
+          />
+        ))}
       </div>
-      <h3 className="d-flex flex-row justify-content-center">Total compra: ${precioTotal}</h3>
+      <h3 className="d-flex flex-row justify-content-center">
+        Total compra: ${precioTotal}
+      </h3>
       <div className="d-flex flex-row justify-content-center cartFooter">
-        <Button variant="danger" size="sm" onClick={handleRemoveList}>Limpiar Carrito</Button>
+        <Button variant="danger" size="sm" onClick={handleRemoveList}>
+          Limpiar Carrito
+        </Button>
       </div>
       <div className="d-flex flex-row justify-content-center cartFooter">
-        <Button variant="success" size="sm" >FINALIZAR COMPRA</Button>
+        <Button as={Link} to="/formulario" variant="success" size="sm">
+          FINALIZAR COMPRA
+        </Button>
       </div>
     </div>
   );
