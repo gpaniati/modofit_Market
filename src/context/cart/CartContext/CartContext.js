@@ -1,5 +1,4 @@
 import { getDoc, doc, getFirestore, updateDoc } from "firebase/firestore";
-//import { createContext, useEffect, useState } from "react";
 import { createContext, useState } from "react";
 export const CartContext = createContext();
 
@@ -17,7 +16,8 @@ function CartProvider({ children }) {
 
   //Hook que detecta la incorporacion de producto y recalcula precio total de compra.
   /*useEffect(() => {
-    setPrecioTotal(handlePrecioTotal())
+    setTotalProductos(0);
+    //setPrecioTotal(handlePrecioTotal())
   }, [cartList]);
   */
 
@@ -61,6 +61,7 @@ function CartProvider({ children }) {
   function removeList() {
     setCartList([]);
     setPrecioTotal(0);
+    setTotalProductos(0);
   }
 
   //Funcion para eliminar producto del carrito.

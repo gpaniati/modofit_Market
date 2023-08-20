@@ -64,6 +64,7 @@ function CheckOut() {
           <Form.Group className="mb-3" controlId="formName"> 
             <Form.Label>Nombre</Form.Label>
             <Form.Control type="name" 
+            required
             placeholder="Ingrese su nombre" 
             value = {form.formName}
             onChange={(e) => setField("formName", e.target.value)}
@@ -76,6 +77,7 @@ function CheckOut() {
           <Form.Group className="mb-3" controlId="formSurname">
             <Form.Label>Apellido</Form.Label>
             <Form.Control type="surname" 
+            required
             placeholder="Ingrese su apellido" 
             value = {form.formSurname}
             onChange={(e) => setField("formSurname", e.target.value)}
@@ -88,6 +90,7 @@ function CheckOut() {
           <Form.Group className="mb-3" controlId="formEmail">
             <Form.Label>Email</Form.Label>
             <Form.Control type="email" 
+            required
             placeholder="Ingrese Email" 
             value = {form.formEmail}
             onChange={(e) => setField("formEmail", e.target.value)}
