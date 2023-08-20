@@ -7,7 +7,8 @@ import CartItems from "../CartItems/CartItems";
 import "../Cart/Cart.css";
 
 function Cart() {
-  const { cartList, removeList, deleteItem, precioTotal } =
+  //const { cartList, removeList, deleteItem, precioTotal } =
+  const { cartList, removeList, deleteItem } =
     useContext(CartContext);
 
   function handleItemDelete(producto) {
@@ -53,7 +54,7 @@ function Cart() {
         ))}
       </div>
       <h3 className="d-flex flex-row justify-content-center">
-        Total de compra: ${precioTotal}
+        
       </h3>
       <div className="d-flex flex-row justify-content-center cartFooter">
         <Button variant="danger" size="sm" onClick={handleRemoveList}>
@@ -70,3 +71,4 @@ function Cart() {
 }
 
 export default Cart;
+//Total de compra: ${precioTotal}
