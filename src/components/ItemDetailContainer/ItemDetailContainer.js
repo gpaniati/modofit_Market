@@ -2,7 +2,6 @@
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail_1";
 import useGetDocumentById from "../../hooks/useGetDocumentById";
-//import imagen from "../images/cargando.gif";
 import cargando from "../images/cargando.gif"
 
 function ItemDetailContainer() {

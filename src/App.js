@@ -5,6 +5,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import Cart from "./components/Cart/Cart";
 import Formulario from "./components/Formulario/Formulario";
 import CartProvider from "./context/cart/CartContext/CartContext";
+import FinCompra from "./components/FinCompra/FinCompra";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           />
           <Route exact path="/cart" element={<Cart />}/>
           <Route exact path="/formulario" element={<Formulario />}/>
+          <Route exact path="/fincompra/:idOrder" element={<FinCompra />}/>
         </Routes>
       </BrowserRouter>
     </CartProvider>

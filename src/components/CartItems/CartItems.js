@@ -14,13 +14,11 @@ function CartItems({ item, itemDelete }) {
         as="li"
         className="d-flex justify-content-center align-items-center"
       >
-        <Image className="imageCart" src={item.imagen}/>
-        
-        <div className="detalleItem">
+        <Image className="imageCart" src={item.imagen}/>  
+        <div className="detalleItem ms-2 me-auto">
           <div className="fw-bold">{item.nombre}</div>
           ${item.precio}
-        </div>
-        
+        </div> 
         <Badge className="badgeCart" bg="success"pill>
           {item.cantidad}
         </Badge>
@@ -32,5 +30,3 @@ function CartItems({ item, itemDelete }) {
 }
 
 export default CartItems;
-
-//className="ms-2 me-auto"
