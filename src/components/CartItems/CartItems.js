@@ -10,7 +10,7 @@ function CartItems({ item, itemDelete }) {
 
   return (
     <div className='cartItem d-flex justify-content-center'>
-    <Card style={{ width: "60rem" }}>
+    <Card style={{ width: "40rem" }}>
       <Card.Body>
     <ListGroup as="ol">
       <ListGroup.Item

@@ -5,7 +5,7 @@ function ItemList({ productos }) {
   
   return (
     <div>
-      <CardGroup className="d-flex justify-content-around align-items-center mt-3">
+      <CardGroup className="d-flex justify-content-around flex-wrap">
         {productos.map((producto) => (
           <Item key={producto.id} producto={producto} />
         ))}

@@ -57,13 +57,13 @@ function Cart() {
         
       </h3>
       <div className="d-flex flex-row justify-content-center cartFooter">
-        <Button variant="danger" size="sm" onClick={handleRemoveList}>
+        <Button variant="danger" size="md" onClick={handleRemoveList}>
           Limpiar Carrito
         </Button>
       </div>
       <div className="d-flex flex-row justify-content-center cartFooter">
-        <Button as={Link} to="/checkout" variant="success" size="sm">
-          FINALIZAR COMPRA
+        <Button as={Link} to="/checkout" variant="success" size="md">
+          CONFIRMAR COMPRA
         </Button>
       </div>
     </div>
