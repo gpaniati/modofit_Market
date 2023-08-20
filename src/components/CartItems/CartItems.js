@@ -9,8 +9,8 @@ import { Card } from 'react-bootstrap';
 function CartItems({ item, itemDelete }) {
 
   return (
-    <div className='d-flex justify-content-center'>
-    <Card style={{ width: "50rem" }}>
+    <div className='cartItem d-flex justify-content-center'>
+    <Card style={{ width: "60rem" }}>
       <Card.Body>
     <ListGroup as="ol">
       <ListGroup.Item

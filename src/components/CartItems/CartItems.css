@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.cartItem{
+    font-family: 'Montserrat', sans-serif!important;
+    font-size: 18px;
+}
+
 .imageCart{
     height: 100px;
-    margin: 20px;
+    margin: 10px;
 }
 
 .badgeCart, 
