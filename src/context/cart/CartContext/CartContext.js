@@ -1,6 +1,5 @@
 import { getDoc, doc, getFirestore, updateDoc } from "firebase/firestore";
 import { createContext, useEffect, useState } from "react";
-import imagen from "../../../images/cargando.gif";
 export const CartContext = createContext();
 
 function CartProvider({ children }) {
