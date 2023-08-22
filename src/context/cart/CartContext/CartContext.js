@@ -51,7 +51,6 @@ function CartProvider({ children }) {
       }
       newCart = [...cartList, {...newProd, cantidad: cantidad}];
     }   
-    setUpdateState(false);
     updateStock(producto.id, cantidad);
     setCartList(newCart);
     setTotalProductos(totalProductos + cantidad);

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.categoria{
+    background-color: rgb(180, 209, 180);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 8px;
+    text-transform: capitalize;
+}
+
+.categoria h2{
+    margin: 0px;
+}
