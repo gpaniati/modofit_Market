@@ -8,7 +8,6 @@ import "../Cart/Cart.css";
 
 function Cart() {
   const { cartList, removeList, deleteItem, precioTotal } =
-  //const { cartList, removeList, deleteItem } =
     useContext(CartContext);
 
   function handleItemDelete(producto) {
