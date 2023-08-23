@@ -1,4 +1,4 @@
-//import { Button, Card, Col, Container, Row, Image } from "react-bootstrap";
+
 import Badge from 'react-bootstrap/Badge';
 import Image from 'react-bootstrap/Image';
 import { BsFillTrashFill } from "react-icons/bs";

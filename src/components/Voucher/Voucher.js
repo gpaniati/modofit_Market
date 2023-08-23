@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import imagen from "../../images/tildeOk.png"
 
 function Voucher() {
 
@@ -18,6 +19,7 @@ function Voucher() {
         </Modal.Header>
         <Modal.Body>
           <h5>Su compra fue registrada con exito!!!</h5>
+          <img src={imagen} alt="tildeok"></img>
         </Modal.Body>
         <Modal.Body>
             <p>Número de orden: {idOrder}</p>
