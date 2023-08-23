@@ -1,5 +1,5 @@
 import { getDoc, doc, getFirestore, updateDoc } from "firebase/firestore";
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 export const CartContext = createContext();
 
 function CartProvider({ children }) {
@@ -15,23 +15,22 @@ function CartProvider({ children }) {
   const [updateState, setUpdateState] = useState(false);
 
   //Hook que detecta la incorporacion de producto y recalcula precio total de compra.
-  /*useEffect(() => {
-    setTotalProductos(0);
-    //setPrecioTotal(handlePrecioTotal())
+  useEffect(() => {
+    setPrecioTotal(handlePrecioTotal())
   }, [cartList]);
-  */
+  
 
-  //funcion para calcular el precio total del carrito. 
-  /*function handlePrecioTotal() {
+  //Funcion para calcular el precio total del carrito. 
+  function handlePrecioTotal() {
     const cartAuxiliar = (handlePrecioTotalByProducto());
     const valorInicial = 0;
     return cartAuxiliar.reduce((acumulador, producto) => acumulador + producto.precioTotalByProdcuto, valorInicial);
-  }*/
+  }
 
   //Funcion para retorna un carrito con item y su total de acuerdo a la cantidad). 
-  /*function handlePrecioTotalByProducto() {
+  function handlePrecioTotalByProducto() {
     return cartList.map((producto) => ({...producto, precioTotalByProdcuto: (producto.cantidad * producto.precio)}));
-  }*/
+  }
 
   //Funcion para para agregar un producto al carrito.
   function addToCart(producto, cantidad) {
